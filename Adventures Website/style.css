@@ -48,6 +48,7 @@ color: #fff;
     background: #fc036b;
     border-radius: 30px;
     color:whitesmoke;
+     list-style: none;
 }
 a{
     text-decoration: none;
@@ -93,7 +94,7 @@ ul{
      width: 100%;
     margin: 80px auto;
 }
-.row{
+.row2{
     display: flex;
     align-items: center;
     gap: 20px;
@@ -107,13 +108,13 @@ ul{
     width: 100%;
     overflow: hidden;
     margin-top: 20px;
-
 }
 .col {
-   max-width:40%;
-   height:600px;  
-   text-align: center;
-   margin-top: -50px;
+   min-width:40%;
+   height:200px;  
+   text-align: center; 
+   margin-bottom: 400px;
+   margin-left: 20px;
 }
 .col h4{
     font-size: xx-large;
@@ -121,8 +122,10 @@ ul{
 .col p{
     font-size:large;
     text-align: left;
+    margin-left: 25px;
+    margin-right: 20px;
 }
-.events .row{
+.events .row2{
     margin-top: 50px;
 
 }
@@ -206,24 +209,28 @@ margin-top: 100px;
 }
 .colnew
 {
-    width: 50%;
-    margin-top:-230px;
-}
+    min-width: 50%; 
+    position: relative;
+    margin-top:-180px ;
+} 
 .colnew2{
-    width: 50%; 
+    min-width: 50%; 
     height: 80%;
-    margin-top: 20px;
+    margin-top:20px;
 }
 .colnew2 .img12{
+    float: right;
     display: flex;
     margin-top: -100px;
 }
 .colnew2 .img34
 {
+    float: right;
     margin-top: 20px;
     display: flex;
 }
 .colnew p{
+    width: 70%;
     margin-left: 50px;
     font-size: large;
     line-height:28px;
@@ -269,13 +276,162 @@ margin-top: 100px;
     color: #fff;
     line-height: 30px;
 }
-/* Mobile Max:678px */
-/* Tab : 768 - 1024
+.menubtn
+{ 
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+/* Mobile Max:678px 
+Tab : 768 - 1024
 Laptop : 1025-1440
 Desktop : 1441*/
-@media screen and (min-width: 768px) and (max-width:1024px){
-    .row
-    {
-        flex-wrap: wrap;
+
+/* LAP VIEW */
+@media only screen and (max-width:678px) {
+    .nav-bar{
+        padding: 20px;
+        margin-top: 10px;
+    } 
+    .nav-bar img{
+        width:30px;
+        height: 20px;
+        margin-top: 5px;
     }
+    .col{
+        height:300px;
+        width: 80%;
+        margin-left: 50px;
+    } 
+    .menubtn {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+    }
+    .logo {
+        font-size: x-large;
+    }
+    .row2 { 
+        display: block;
+        height: auto; 
+    } 
+    .explore h1{
+        font-size: 40px;
+    }
+    .explore p{
+        line-height: 30px;
+        width: 80%;
+    }
+    .row{
+        display: block;
+        margin-top: 230px; 
+    }
+    .colnew h1{
+        font-size: 30px;
+        width: 100%;
+    } 
+    .colnew2 .img12{
+        display: block;
+        width: 80%;
+        margin-top: auto;
+        margin-right:15%;
+    } 
+    .colnew2 .img34{
+        display: block;
+        width: 80%; 
+        margin-right:15%;
+    }
+    .img34 img{
+        margin-top: 50px;
+    } 
+    .footer{ 
+        margin-top:292%;
+        height:auto; 
+    }
+    .footer p{
+        margin-left: 10px;
+    }
+    }
+@media only screen and (min-width: 1024px) and (max-width:1441px) {
+.colnew h1{
+    font-size: xx-large;
+}
+.row2{
+    margin-right: 20px;
+}
+}
+
+/* TAB VIEW */
+@media only screen and (min-width: 768px) and (max-width:1023px) {
+    .nav-bar {
+        margin-top: 10px;
+    }
+    .menubtn {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+    }
+    .logo {
+        font-size: xx-large;
+    }
+    .row2 { 
+        display: block;
+        height: auto; 
+    } 
+     .col p{ 
+        text-align: center; 
+        margin: auto 40px;
+     }
+     .explore p
+     {
+        line-height:30px;
+     }
+     .row{
+        display: block;
+        width: 100%;
+     }
+     .colnew
+     {
+        margin-top:1px;
+
+     }
+     .colnew h1
+     {
+        margin-top: -40px;
+     }
+     .colnew p{
+        width: 80%;
+     } 
+     .colnew2
+     {
+        margin-left: 20px;
+     }
+     .colnew2 .img12  {
+        width: 100%;
+        display: block;
+        height: auto;
+        margin-top:-30px;
+        margin-right:100px;
+     }
+     .img12 img{
+        width: 40%;
+     }
+     
+     .colnew2 .img34  {
+        width: 100%;
+        display: block;
+        height: auto;
+        margin-top:1px;
+        margin-right:100px;
+     }
+     .img34 img{
+        width: 40%;
+     }
+     .footer
+     {  
+        margin-top:62%;
+        top: auto;
+     }     
 }
